@@ -54,7 +54,8 @@ body {
 }
 
 .add-btn:hover {
-  background-color: greenyellow;
+  background-color: rgb(78, 179, 137);
+  color: white;
 }
 
 .order {
@@ -124,24 +125,22 @@ body {
 }
 
 #complete-btn:hover {
-  background-color: rgb(71, 164, 144);
+  background-color: rgb(78, 179, 137);
 }
 
 .form {
-  border-radius: 8px;
-  margin: 50px;
+  text-shadow: 0px 0px 10px white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  float: left;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
   position: fixed;
-  top: 50px;
-  left: 230px;
-  width: 30%;
-  background-color: rgb(123, 199, 174);
-  padding: 60px 30px;
+  top: 20%;
+  left: 32%;
+  background-color: rgb(78, 179, 137);
 }
 
 .form p {
@@ -157,9 +156,9 @@ body {
 }
 
 .form button {
+  font-weight: bold;
   font-size: 20px;
   background-color: lightblue;
-
   border: 3px solid lightblue;
   padding: 10px 40px;
   border-radius: 15px;
@@ -167,7 +166,8 @@ body {
 
 .form button:active {
   border: none;
-  background-color: lightblue;
+  background-color: rgb(65, 129, 151);
   padding: 10px 40px;
   margin-bottom: 5.5px;
+  color: white;
 }
