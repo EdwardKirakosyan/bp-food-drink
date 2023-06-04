@@ -19,7 +19,7 @@ function renderOrderArray() {
     orderArray.forEach(function (order) {
       list += `<div class="list" id="list">
                 <p>${order.name}</p>
-                <button data-remove="list">remove</button>
+                <button data-remove="list">x</button>
                 <p>$${order.price}</p>
               </div>`
       total += Number(order.price)

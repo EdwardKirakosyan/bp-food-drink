@@ -76,15 +76,55 @@ body {
 
 .total {
   border-top: 1px solid black;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .list {
+  font-size: 25px;
+  font-weight: bold;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+.list button {
+  font-size: 20px;
+  background-color: white;
+  color: rgb(250, 143, 143);
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 25px;
+}
+
+.list button:hover {
+  color: rgb(255, 0, 0);
+}
+.list button:active {
+  color: rgb(255, 0, 0);
+}
+
+#complete-btn {
+  color: azure;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 20px auto;
+  align-items: center;
+  text-align: center;
+  padding: 10px 25px;
+  background-color: rgb(131, 131, 216);
+}
+
+#complete-btn:hover {
+  background-color: rgb(71, 164, 144);
 }
 
 .form {
@@ -96,8 +136,10 @@ body {
   justify-content: space-between;
   gap: 20px;
   position: fixed;
-  top: 20px;
-  left: 20px;
+  left: 25%;
+  right: 25%;
+  top: 10px;
+  bottom: 10px;
   background-color: rgb(123, 199, 174);
   padding: 60px 30px;
 }
