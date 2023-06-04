@@ -135,11 +135,11 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  float: left;
   position: fixed;
-  left: 25%;
-  right: 25%;
-  top: 10px;
-  bottom: 10px;
+  top: 50px;
+  left: 230px;
+  width: 30%;
   background-color: rgb(123, 199, 174);
   padding: 60px 30px;
 }
