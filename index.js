@@ -16,6 +16,7 @@ formDiv.addEventListener("submit", function (e) {
   yourOrder.innerHTML = `<p class="thanks">
                             Thank you for your order, <span>${name}</span> !
                         </p>`
+  orderArray.length = 0
 })
 
 const orderArray = []
