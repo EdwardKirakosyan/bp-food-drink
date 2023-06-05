@@ -7,6 +7,11 @@ const formDiv = document.getElementById("form-div")
 document.addEventListener("click", pushToArray)
 document.addEventListener("click", removeFromArray)
 document.addEventListener("click", completeOrder)
+document.addEventListener("click", payOrder)
+
+formDiv.addEventListener("submit", function (e) {
+  e.preventDefault()
+})
 
 const orderArray = []
 
@@ -57,13 +62,41 @@ function removeFromArray(e) {
 function completeOrder(e) {
   if (e.target.dataset.complete) {
     formDiv.innerHTML = `<form id="form" class="form">
-                          <p>Enter card details</p>
-                          <input type="text" name="full-name" id="full-name" required />
-                          <input type="number" name="card" id="card" required />
-                          <input type="password" name="cvv" id="cvv" required />
-                          <button>pay</button>
+                          <p>Card details</p>
+                          <input 
+                            type="text" 
+                            name="full-name" 
+                            id="full-name" 
+                            placeholder="Enter your name"
+                            required 
+                            />
+                          <input 
+                            type="number" 
+                            name="card" 
+                            id="card" 
+                            placeholder="Card number"
+                            required 
+                            />
+                          <input 
+                            type="password" 
+                            name="cvv" 
+                            id="cvv"
+                            placeholder="CVV"
+                            required 
+                            />
+                          <button 
+                            type="submit" 
+                            id="pay-btn" 
+                            data-pay="${formDiv}">
+                              PAY
+                          </button>
                         </form>`
     renderOrderArray()
+  }
+}
+
+function payOrder(e) {
+  if (e.target.dataset.pay) {
   }
 }
 
