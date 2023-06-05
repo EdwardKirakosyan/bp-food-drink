@@ -29,7 +29,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(194, 194, 194);
 }
 
 .item-emo {
@@ -59,7 +59,7 @@ body {
   border-radius: 50%;
   background-color: white;
   margin-left: auto;
-  border: 1px solid gray;
+  border: none;
 }
 
 .add-btn:hover {
@@ -114,9 +114,11 @@ body {
 }
 
 .list button:hover {
+  text-shadow: 0 0 5px rgb(255, 0, 0);
   color: rgb(255, 0, 0);
 }
 .list button:active {
+  text-shadow: 0 0 5px rgb(255, 0, 0);
   color: rgb(255, 0, 0);
 }
 
@@ -180,7 +182,26 @@ body {
 .form button:active {
   border: none;
   background-color: rgb(65, 129, 151);
-  padding: 10px 40px;
+  padding: 7.4px 40px;
   margin-bottom: 5.5px;
   color: white;
+}
+
+.form button:hover {
+  background-color: rgb(57, 108, 126);
+  border: 3px solid rgb(57, 108, 126);
+  color: white;
+}
+
+.thanks {
+  color: rgb(78, 179, 137);
+  text-align: center;
+  font-size: 35px;
+  text-shadow: 0 0 0.5px black;
+}
+
+.thanks span {
+  color: rgb(62, 121, 96);
+  font-weight: bold;
+  text-shadow: 0 0 0.5px rgb(255, 255, 255);
 }

@@ -7,10 +7,15 @@ const formDiv = document.getElementById("form-div")
 document.addEventListener("click", pushToArray)
 document.addEventListener("click", removeFromArray)
 document.addEventListener("click", completeOrder)
-document.addEventListener("click", payOrder)
 
 formDiv.addEventListener("submit", function (e) {
   e.preventDefault()
+  const loginFormData = new FormData(form)
+  const name = loginFormData.get("full-name")
+  formDiv.innerHTML = ""
+  yourOrder.innerHTML = `<p class="thanks">
+                            Thank you for your order, <span>${name}</span> !
+                        </p>`
 })
 
 const orderArray = []
@@ -92,11 +97,6 @@ function completeOrder(e) {
                           </button>
                         </form>`
     renderOrderArray()
-  }
-}
-
-function payOrder(e) {
-  if (e.target.dataset.pay) {
   }
 }
 
