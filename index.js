@@ -69,8 +69,6 @@ function removeFromArray(e) {
   renderOrderArray()
 }
 
-function f() {}
-
 function completeOrder(e) {
   if (e.target.dataset.complete) {
     formDiv.innerHTML = `<form id="form" class="form">

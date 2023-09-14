@@ -1,5 +1,9 @@
 {
   "css.format.braceStyle": "expand",
   "less.format.braceStyle": "expand",
-  "scss.format.braceStyle": "expand"
+  "scss.format.braceStyle": "expand",
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true
 }
