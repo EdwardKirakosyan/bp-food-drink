@@ -2,7 +2,9 @@ import { menuArray } from "./data.js"
 
 const allItems = document.getElementById("all-items")
 const yourOrder = document.getElementById("your-order")
+const mainOrder = document.getElementById("main-order")
 const formDiv = document.getElementById("form-div")
+const closeBtn = document.getElementById("close-btn")
 
 document.addEventListener("click", pushToArray)
 document.addEventListener("click", removeFromArray)
@@ -28,24 +30,25 @@ function renderOrderArray() {
 
   if (!list) {
     orderArray.forEach(function (order) {
-      list += `<div class="list" id="list">
+      list += `<div class="list" id="${order.id}">
                 <p>${order.name}</p>
-                <button data-remove="list">x</button>
+                <button data-remove="${order.id}">x</button>
                 <p>$${order.price}</p>
               </div>`
       total += Number(order.price)
     })
 
     if (!orderHtml) {
-      orderHtml += `<div class="main-order">
+      orderHtml += `<div class="main-order" id="main-order">
                       <h1>Your Order</h1>
                         ${list}
                       <p class="total">Total price: $${total}</p>
                       <button id="complete-btn" data-complete="${formDiv}">Complete Order</button>
-                    </div>`
+                      </div>`
     }
   }
-  return (yourOrder.innerHTML = orderHtml)
+
+  yourOrder.innerHTML = list !== "" ? orderHtml : ""
 }
 
 function pushToArray(e) {
@@ -60,10 +63,13 @@ function pushToArray(e) {
 
 function removeFromArray(e) {
   if (e.target.dataset.remove) {
-    orderArray.pop(e.target.dataset.remove)
-    renderOrderArray()
+    orderArray.forEach((r) => r.id === e.target.dataset.remove)
+    console.log(e.target.dataset.remove)
   }
+  renderOrderArray()
 }
+
+function f() {}
 
 function completeOrder(e) {
   if (e.target.dataset.complete) {
@@ -107,10 +113,12 @@ function renderMenu() {
                       <p class="item-emo">${item.emoji}</p>
                       <div class="inner-div">
                         <h1 class="item-name">${item.name}</h1>
-                        <p class="item-ing">${item.ingredients}</p>
+                        <p class="item-ing">${item.ingredients.join(", ")}</p>
                         <p class="item-price">$${item.price}</p>
                       </div>
-                      <button id="ad-btn" class="add-btn" data-name="${item.name}" data-price="${item.price}">+</button>
+                      <button id="ad-btn" class="add-btn" data-name="${
+                        item.name
+                      }" data-price="${item.price}">+</button>
                   </div>
                   `
   })
@@ -118,7 +126,6 @@ function renderMenu() {
 }
 renderMenu()
 
-const closeBtn = document.getElementById("close-btn")
 closeBtn.addEventListener("click", () => {
   if (formDiv.innerHTML !== "") {
     formDiv.innerHTML = ""
