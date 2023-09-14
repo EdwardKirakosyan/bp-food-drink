@@ -1,4 +1,4 @@
-import { menuArray } from "/data.js"
+import { menuArray } from "./data.js"
 
 const allItems = document.getElementById("all-items")
 const yourOrder = document.getElementById("your-order")
@@ -8,18 +8,18 @@ document.addEventListener("click", pushToArray)
 document.addEventListener("click", removeFromArray)
 document.addEventListener("click", completeOrder)
 
+const orderArray = []
+
 formDiv.addEventListener("submit", function (e) {
   e.preventDefault()
   const loginFormData = new FormData(form)
   const name = loginFormData.get("full-name")
   formDiv.innerHTML = ""
   yourOrder.innerHTML = `<p class="thanks">
-                            Thank you for your order, <span>${name}</span> !
+                            Thank you for your order, <span>${name}</span>!
                         </p>`
   orderArray.length = 0
 })
-
-const orderArray = []
 
 function renderOrderArray() {
   let orderHtml = ""
@@ -68,35 +68,34 @@ function removeFromArray(e) {
 function completeOrder(e) {
   if (e.target.dataset.complete) {
     formDiv.innerHTML = `<form id="form" class="form">
+                          <button id="close-btn">x</button>
                           <p>Card details</p>
                           <input 
                             type="text" 
                             name="full-name" 
                             id="full-name" 
                             placeholder="Enter your name"
-                            required 
                             />
                           <input 
                             type="number" 
                             name="card" 
                             id="card" 
                             placeholder="Card number"
-                            required 
                             />
                           <input 
                             type="password" 
                             name="cvv" 
                             id="cvv"
                             placeholder="CVV"
-                            required 
                             />
                           <button 
+                            class="pay-button"
                             type="submit" 
                             id="pay-btn" 
                             data-pay="${formDiv}">
-                              PAY
-                          </button>
-                        </form>`
+                            PAY
+                            </button>
+                            </form>`
     renderOrderArray()
   }
 }
@@ -118,3 +117,10 @@ function renderMenu() {
   return (allItems.innerHTML = contHtml)
 }
 renderMenu()
+
+const closeBtn = document.getElementById("close-btn")
+closeBtn.addEventListener("click", () => {
+  if (formDiv.innerHTML !== "") {
+    formDiv.innerHTML = ""
+  }
+})

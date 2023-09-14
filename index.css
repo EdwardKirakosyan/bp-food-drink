@@ -1,8 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   user-select: none;
   margin: 0;
-  font-family: "Smythe", cursive;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
 
 .main-div {
@@ -70,6 +78,7 @@ body {
 .order {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .main-order h1 {
@@ -157,6 +166,20 @@ body {
   box-shadow: 1px 1px 30px 3px rgb(0, 0, 0);
 }
 
+#close-btn {
+  position: fixed;
+  top: 1;
+  left: 1;
+  border: none;
+  border-radius: 50%;
+  color: red;
+}
+
+#close-btn:hover {
+  background-color: rgb(255, 124, 124);
+  color: white;
+}
+
 .form p {
   color: rgb(255, 255, 255);
   font-size: 40px;
@@ -171,7 +194,7 @@ body {
   padding: 10px 20px;
 }
 
-.form button {
+.pay-button {
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 20px;
@@ -182,15 +205,7 @@ body {
   text-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
-.form button:active {
-  border: none;
-  background-color: rgb(65, 129, 151);
-  padding: 7.4px 40px;
-  margin-bottom: 5.5px;
-  color: white;
-}
-
-.form button:hover {
+.form .pay-button:hover {
   background-color: rgb(57, 108, 126);
   border: 3px solid rgb(57, 108, 126);
   color: white;
