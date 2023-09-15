@@ -16,9 +16,11 @@ formDiv.addEventListener("submit", function (e) {
   const loginFormData = new FormData(form)
   const name = loginFormData.get("full-name")
   formDiv.innerHTML = ""
-  yourOrder.innerHTML = `<p class="thanks">
+  if (name !== "") {
+    yourOrder.innerHTML = `<p class="thanks">
                             Thank you for your order, <span>${name}</span>!
                         </p>`
+  }
   orderArray.length = 0
 })
 
@@ -62,8 +64,7 @@ function pushToArray(e) {
 
 function removeFromArray(e) {
   if (e.target.dataset.remove) {
-    orderArray.forEach((r) => r.id === e.target.dataset.remove)
-    console.log(e.target.dataset.remove)
+    orderArray.pop()
   }
   renderOrderArray()
 }

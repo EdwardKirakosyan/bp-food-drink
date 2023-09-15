@@ -15,8 +15,9 @@ button {
 }
 
 .main-div {
+  padding: 0;
   margin: auto;
-  width: 60%;
+  width: 40%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -24,6 +25,7 @@ button {
 }
 
 .header {
+  height: 170px;
   padding: 1px 20px;
   background-image: url(images/burger-bg.jpg);
   background-repeat: no-repeat;
@@ -34,8 +36,8 @@ button {
 }
 
 .each-item {
-  padding: 20px;
-  margin: 0 10px;
+  padding: 50px;
+  margin: 0 30px;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -46,11 +48,12 @@ button {
 
 .item-emo {
   padding: 0;
-  margin: 13px;
+  margin: 5px;
   font-size: 50px;
 }
 
 .inner-div {
+  padding: 0 30px;
   display: block;
   font-size: 13px;
 }
@@ -67,9 +70,9 @@ button {
 .add-btn {
   padding: 2px 10px;
   font-size: 30px;
-  color: gray;
+  color: rgb(38, 131, 1);
   border-radius: 50%;
-  background-color: white;
+  background-color: rgb(248, 248, 248);
   margin-left: auto;
   border: none;
 }
