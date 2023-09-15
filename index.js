@@ -2,7 +2,6 @@ import { menuArray } from "./data.js"
 
 const allItems = document.getElementById("all-items")
 const yourOrder = document.getElementById("your-order")
-const mainOrder = document.getElementById("main-order")
 const formDiv = document.getElementById("form-div")
 const closeBtn = document.getElementById("close-btn")
 
