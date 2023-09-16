@@ -4,9 +4,8 @@
 
 html,
 body {
-  width: 80%;
   user-select: none;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Roboto", sans-serif;
   background-color: rgb(255, 245, 233);
 }
@@ -24,13 +23,22 @@ button {
   background-color: rgb(255, 255, 255);
 }
 
+@media only screen and (min-width: 800px) {
+  .main-div {
+    width: 40%;
+  }
+}
+
 .header {
   height: 170px;
-  padding: 1px 20px;
+  padding: 5px 20px;
   background-image: url(images/burger-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: right;
   font-size: small;
   color: white;
 }
@@ -46,7 +54,6 @@ button {
 
 .item-emo {
   padding: 0;
-  margin: 5px;
   font-size: 50px;
 }
 
