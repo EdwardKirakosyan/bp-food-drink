@@ -4,6 +4,11 @@
 
 html,
 body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  line-height: 1.6;
   user-select: none;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -15,43 +20,31 @@ button {
 }
 
 .main-div {
-  padding: 0;
-  margin: auto;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: rgb(255, 255, 255);
 }
 
-@media only screen and (min-width: 900px) {
-  .main-div {
-    width: 40%;
-  }
-
-  .inner-div {
-    width: 100%;
-    padding: 0 60px;
-    display: block;
-    font-size: 13px;
-  }
-}
-
 .header {
-  height: 170px;
-  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1.5em;
   background-image: url(images/burger-bg.jpg);
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
   background-size: cover;
-  background-position-y: top;
-  background-position-x: right;
-  font-size: small;
   color: white;
 }
 
+.header-text {
+  margin: 0;
+}
+
 .each-item {
-  padding: 0 20px;
+  padding: .5em 1.5em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -61,32 +54,36 @@ button {
 
 .item-emo {
   padding: 0;
-  font-size: 50px;
+  margin: 0;
+  font-size: 3em;
 }
 
 .inner-div {
-  width: 100%;
-  padding: 0 30px;
-  display: block;
-  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  font-size: 1rem;
+  margin: auto 0;
 }
 
-.item-ing {
-  font-size: 16px;
+.item-price,
+.item-ing,
+.item-name {
+  margin: .2em 0;
 }
 
 .item-price {
-  font-size: 18px;
   font-weight: bold;
 }
 
 .add-btn {
-  padding: 2px 10px;
-  font-size: 30px;
+  padding: 0.2em 0.5em;
+  margin: auto 0 auto auto;
+
+  font-size: 2rem;
   color: rgb(38, 131, 1);
   border-radius: 50%;
   background-color: rgb(248, 248, 248);
-  margin-left: auto;
   border: none;
 }
 
@@ -96,7 +93,7 @@ button {
 }
 
 .order {
-  padding: 20px;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -128,19 +125,22 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.list p,
+.list button {
+  margin: 0;
+  padding: .2em;
 }
 
 .list button {
-  font-size: 20px;
+  font-size: .8em;
   background-color: white;
   color: rgb(255, 0, 0);
   font-weight: bold;
-  padding: 5px 10px;
   border: none;
-  border-radius: 50%;
-  margin-left: 5px;
-  margin-top: 25px;
+  margin-right: auto;
 }
 
 .list button:hover {
@@ -174,8 +174,8 @@ button {
   right: 0;
   left: 0;
   margin: auto;
-  width: 300px;
-  height: 500px;
+  width: 250px;
+  height: 450px;
   padding: 25px;
   border-radius: 10px;
   background-color: rgb(78, 179, 137);
@@ -198,7 +198,7 @@ button {
 
 .form p {
   color: rgb(255, 255, 255);
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   font-weight: bold;
   text-shadow: 0 0 10px black;
@@ -211,12 +211,14 @@ button {
 }
 
 .pay-button {
+  margin: 0;
+  width: 100%;
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 20px;
   background-color: lightblue;
   border: 3px solid lightblue;
-  padding: 10px 40px;
+  padding: .3em 0.7em;
   border-radius: 15px;
   text-shadow: 0 0 15px rgb(255, 255, 255);
 }
@@ -238,4 +240,11 @@ button {
   color: rgb(62, 121, 96);
   font-weight: bold;
   text-shadow: 0 0 0.5px rgb(255, 255, 255);
+}
+
+@media (min-width: 600px) {
+  .main-div {
+    min-width: 500px;
+    width: 40%;
+  }
 }
