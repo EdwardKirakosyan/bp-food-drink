@@ -1,5 +1,4 @@
 import { menuArray } from "./data.js"
-
 const allItems = document.getElementById("all-items")
 const yourOrder = document.getElementById("your-order")
 const formDiv = document.getElementById("form-div")
@@ -8,7 +7,6 @@ const closeBtn = document.getElementById("close-btn")
 document.addEventListener("click", pushToArray)
 document.addEventListener("click", removeFromArray)
 document.addEventListener("click", completeOrder)
-
 const orderArray = []
 
 formDiv.addEventListener("submit", function (e) {
