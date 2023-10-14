@@ -37,23 +37,19 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: end;
-  padding: 1.5em;
+  padding: 2em;
   background-image: url(images/burger-bg.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .header-text {
-  margin: .1em;
-  line-height: 0.8em;
-  color: white;
-  background-color: rgba(57, 108, 126, 0.763);
-  border-radius: 10px;
-  padding: 0.6em;
-}
-
-.header-text p {
   margin: 0;
+  line-height: .7em;
+  color: white;
+  background-color: rgba(57, 108, 126, 0.712);
+  border-radius: 40px;
+  padding: 0.6em;
 }
 
 .each-item {
