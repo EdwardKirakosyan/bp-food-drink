@@ -1,21 +1,21 @@
 export const menuArray = [
   {
     id: 142,
-    name: "Pizza",
+    name: "PIZZA",
     ingredients: ["pepperoni", "mushroms", "mozarella", "tomatoes"],
     price: 6,
     emoji: "🍕",
   },
   {
     id: 443,
-    name: "Salad",
+    name: "SALAD",
     ingredients: ["arugula", "spinach", "chard", "watercress"],
     price: 4,
     emoji: "🥗",
   },
   {
     id: 242,
-    name: "Burger",
+    name: "BURGER",
     ingredients: ["beef", "cheese", "onions", "pickles"],
     price: 5,
     emoji: "🍔",

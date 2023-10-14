@@ -11,12 +11,15 @@ body {
   line-height: 1.6;
   user-select: none;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  background-color: rgb(255, 245, 233);
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  background-color: rgb(27, 27, 27);
 }
 
 button {
   cursor: pointer;
+  font-family: inherit;
+
 }
 
 .main-div {
@@ -24,11 +27,13 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(236, 236, 236);
 }
 
 .header {
   display: flex;
+  font-weight: bold;
+  letter-spacing: 3px;
   flex-direction: column;
   justify-content: start;
   align-items: start;
@@ -50,6 +55,8 @@ button {
   align-items: center;
   justify-content: start;
   border-bottom: 1px solid rgb(194, 194, 194);
+  letter-spacing: 2px;
+
 }
 
 .item-emo {
@@ -74,21 +81,22 @@ button {
 
 .item-price {
   font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .add-btn {
   padding: 0.2em 0.5em;
   margin: auto 0 auto auto;
-
   font-size: 2rem;
-  color: rgb(38, 131, 1);
+  font-weight: bold;
+  color: rgb(57, 108, 126);
   border-radius: 50%;
   background-color: rgb(248, 248, 248);
   border: none;
 }
 
 .add-btn:hover {
-  background-color: rgb(78, 179, 137);
+  background-color: rgb(57, 108, 126);
   color: white;
 }
 
@@ -102,6 +110,8 @@ button {
 .main-order h1 {
   display: flex;
   flex-direction: column;
+  font-size: 3rem;
+  color: rgb(57, 108, 126);
 }
 
 .main-order h1,
@@ -113,7 +123,9 @@ button {
 
 .total {
   border-top: 1px solid black;
-  font-size: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(57, 108, 126);
   font-weight: bold;
 }
 
@@ -126,17 +138,19 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .list p,
 .list button {
   margin: 0;
   padding: .2em;
+
 }
 
 .list button {
   font-size: .8em;
-  background-color: white;
+  background-color: #ECECEC;
   color: rgb(255, 0, 0);
   font-weight: bold;
   border: none;
@@ -148,20 +162,22 @@ button {
 }
 
 #complete-btn {
-  color: azure;
+  color: rgb(57, 108, 126);
   font-weight: bold;
   border: none;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 7px;
+  font-size: 1.7rem;
+  font-weight: bold;
   margin: 20px auto;
   align-items: center;
   text-align: center;
   padding: 10px 25px;
-  background-color: rgb(131, 131, 216);
+  background-color: white
 }
 
 #complete-btn:hover {
-  background-color: rgb(78, 179, 137);
+  background-color: rgb(57, 108, 126);
+  color: white;
 }
 
 .form {
@@ -175,51 +191,60 @@ button {
   left: 0;
   margin: auto;
   width: 250px;
-  height: 450px;
-  padding: 25px;
+  height: 430px;
+  padding: 18px;
   border-radius: 10px;
-  background-color: rgb(78, 179, 137);
+  background-color: rgb(57, 108, 126);
   box-shadow: 1px 1px 30px 3px rgb(0, 0, 0);
 }
 
 #close-btn {
+  background-color: #ECECEC;
+  font-size: 1.3rem;
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+  font-weight: bold;
   position: fixed;
-  top: 1;
-  left: 1;
+  top: .5;
+  left: .5;
   border: none;
-  border-radius: 50%;
+  border-radius: 70%;
   color: red;
 }
 
 #close-btn:hover {
-  background-color: rgb(255, 124, 124);
-  color: white;
+  color: rgb(255, 255, 255);
+  background-color: #fc6e6e;
+
 }
 
 .form p {
   color: rgb(255, 255, 255);
-  font-size: 30px;
+  margin: 0.5em;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: bold;
   text-shadow: 0 0 10px black;
 }
 
 .form input {
+  font-family: inherit;
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  border-radius: 6px;
+  padding: 0.5em;
+  letter-spacing: 3px;
 }
 
 .pay-button {
-  margin: 0;
-  width: 100%;
-  color: rgb(0, 0, 0);
+  margin: 0 auto;
+  width: 40%;
+  color: rgb(57, 108, 126);
   font-weight: bold;
-  font-size: 20px;
-  background-color: lightblue;
-  border: 3px solid lightblue;
+  font-size: 2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
   padding: .3em 0.7em;
-  border-radius: 15px;
+  border-radius: 50%;
   text-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
@@ -227,6 +252,10 @@ button {
   background-color: rgb(57, 108, 126);
   border: 3px solid rgb(57, 108, 126);
   color: white;
+  font-size: 3rem;
+  width: 40%;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .thanks {
@@ -237,9 +266,10 @@ button {
 }
 
 .thanks span {
-  color: rgb(62, 121, 96);
-  font-weight: bold;
-  text-shadow: 0 0 0.5px rgb(255, 255, 255);
+  color: rgb(250, 180, 58);
+  font-size: 4rem;
+  letter-spacing: 7px;
+  text-shadow: 0 0 0.5px rgb(23, 0, 0);
 }
 
 @media (min-width: 600px) {
