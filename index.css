@@ -33,11 +33,12 @@ button {
 .header {
   display: flex;
   font-weight: bold;
+  font-size: 1.5rem;
   letter-spacing: 3px;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
-  padding: 2em;
+  align-items: center;
+  padding: 1.5em;
   background-image: url(images/burger-bg.jpg);
   background-position: center;
   background-size: cover;
@@ -49,7 +50,7 @@ button {
   color: white;
   background-color: rgba(57, 108, 126, 0.712);
   border-radius: 40px;
-  padding: 0.6em;
+  padding: 0.4em;
 }
 
 .each-item {
@@ -198,7 +199,7 @@ button {
   height: 430px;
   padding: 18px;
   border-radius: 10px;
-  background-color: rgb(57, 108, 126);
+  background-color: rgba(57, 108, 126, 0.950);
   box-shadow: 1px 1px 30px 3px rgb(0, 0, 0);
 }
 
@@ -236,7 +237,9 @@ button {
   border: none;
   border-radius: 6px;
   padding: 0.5em;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  color: rgb(57, 108, 126);
+  font-size: 1.1rem;
 }
 
 .pay-button {
